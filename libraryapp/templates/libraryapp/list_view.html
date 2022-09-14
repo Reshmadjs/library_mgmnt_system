@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div class="main">
+    <table>
+        <tbody>
+            {% for data in dataset %}
+            <tr>
+            <td> {{ data.id}} </td>
+            <td> {{ data.title }} </td>
+            <td> {{ data.author }} </td>
+            <td> <form action="../update/{{ data.id}}"> <button type="submit"> Update </button> </form> </td>
+            <td> <form action="../delete/{{ data.id}}"> <button type="submit"> Delete </button> </form> </td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+ 
+</div>
+</body>
+</html>
